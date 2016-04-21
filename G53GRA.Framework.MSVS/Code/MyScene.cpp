@@ -208,14 +208,14 @@ void MyScene::Initialise()
 	skybox[4] = Scene::GetTexture("./skybox_down.bmp");
 	skybox[5] = Scene::GetTexture("./skybox_up.bmp");
 	stage->setTextures(skybox);
+	stage->size(2*camrad);
 	stage->position(0.f, -100.f, 0.f);
-	stage->size(camrad);
 	AddObjectToScene(stage);
 }
 
 void MyScene::Projection()
 {
-	gluPerspective(60.0, (GLdouble)windowWidth / (GLdouble)windowHeight, 1.0, 1000.0);
+	gluPerspective(60.0, (GLdouble)windowWidth / (GLdouble)windowHeight, 1.0, 30000.0);
 }
 
 void MyScene::cameraRadius() {

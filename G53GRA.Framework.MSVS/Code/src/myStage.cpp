@@ -30,7 +30,7 @@ void myStage::Display() {
 
 void myStage::drawStage() {
 	glDisable(GL_LIGHTING);                 // Disable lighting just for skybox
-	glColor4f(1.f, 1.f, 1.f, 0.f);          // Set fill to be invisible (only texture is rendered)
+
 	if (toTexture) glEnable(GL_TEXTURE_2D); // Enable 2D texturing
 
 	if (toTexture) glBindTexture(GL_TEXTURE_2D, texids[0]); // skybox_left.bmp
