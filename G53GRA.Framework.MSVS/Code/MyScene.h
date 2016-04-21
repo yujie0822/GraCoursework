@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Scene.h"
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 class MyScene :
 	public Scene
@@ -13,5 +15,6 @@ private:
 
 	void Initialise();
 	void Projection();
-
+	float camrad, camangle = 0.f;
+	void cameraRadius();
 };

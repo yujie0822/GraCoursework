@@ -15,6 +15,8 @@
 #include "Link.h"
 #include "Water.h"
 #include "SunLight.h"
+#include "src/myStage.h"
+using namespace std;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -167,46 +169,55 @@ void MyScene::Initialise()
 	//s5->SetSpotCutOff(80.0f);
 	//AddObjectToScene(s5);
 
-	// DEMO 9 (TEXTURED CUBE)
-#ifdef __APPLE__
-    TexturedCube *txc = new TexturedCube("./batmanlogo.bmp");
-#else
-	TexturedCube *txc = new TexturedCube("./Code/Demos/Texturing/batmanlogo.bmp");
-#endif
-	txc->size(200.f);
+	//// DEMO 9 (TEXTURED CUBE)
+	//TexturedCube *txc = new TexturedCube("./Code/Demos/Texturing/batmanlogo.bmp");
+	//txc->size(200.f);
 	//AddObjectToScene(txc);
 
-	// DEMO 10 (Animated Texturing)
-#ifdef __APPLE__
-    Link *link = new Link(10.f, 25.f, "./linkSpriteSheet.bmp");
-#else
-	Link *link = new Link(10.f, 25.f, "./Code/Demos/Texturing/linkSpriteSheet.bmp");
-#endif
-	link->position(0.f, -99.9f, -100.f);
-	link->size(10.f);
+	//// DEMO 10 (Animated Texturing)
 
-#ifdef __APPLE__
-    Water *water = new Water(20, 20, "./water.bmp");
-#else
-	Water *water = new Water(20, 20, "./Code/Demos/Texturing/water.bmp");
-#endif
-    
-	water->position(0.f, -99.9f, 100.f);
-	water->size(400.f);
+	//Link *link = new Link(10.f, 25.f, "./Code/Demos/Texturing/linkSpriteSheet.bmp");
+	//link->position(0.f, -99.9f, -100.f);
+	//link->size(10.f);
 
-	Floor *floor = new Floor();
-	floor->size(100);
 
-	SunLight *sl = new SunLight();
-	sl->direction(-1.f, 1.f, 1.f);
+	//Water *water = new Water(20, 20, "./Code/Demos/Texturing/water.bmp");
+ //   
+	//water->position(0.f, -99.9f, 100.f);
+	//water->size(400.f);
 
-	AddObjectToScene(floor);
-	AddObjectToScene(water);
-	AddObjectToScene(link);
-	AddObjectToScene(sl);
+	//Floor *floor = new Floor();
+	//floor->size(100);
+
+	//SunLight *sl = new SunLight();
+	//sl->direction(-1.f, 1.f, 1.f);
+
+	//AddObjectToScene(floor);
+	//AddObjectToScene(water);
+	//AddObjectToScene(link);
+	//AddObjectToScene(sl);
+
+//skybox
+	cameraRadius();
+	myStage *stage = new myStage();
+	GLuint* skybox = new GLuint[6];
+	skybox[0] = Scene::GetTexture("./skybox_left.bmp");
+	skybox[1] = Scene::GetTexture("./skybox_right.bmp");
+	skybox[2] = Scene::GetTexture("./skybox_front.bmp");
+	skybox[3] = Scene::GetTexture("./skybox_back.bmp");
+	skybox[4] = Scene::GetTexture("./skybox_down.bmp");
+	skybox[5] = Scene::GetTexture("./skybox_up.bmp");
+	stage->setTextures(skybox);
+	stage->position(0.f, -100.f, 0.f);
+	stage->size(camrad);
+	AddObjectToScene(stage);
 }
 
 void MyScene::Projection()
 {
 	gluPerspective(60.0, (GLdouble)windowWidth / (GLdouble)windowHeight, 1.0, 1000.0);
+}
+
+void MyScene::cameraRadius() {
+	camrad = (GetWindowHeight() / 2.f) / tan(M_PI / 8.f);      // calcualte camera radius based on height
 }
