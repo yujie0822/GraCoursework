@@ -16,6 +16,9 @@
 #include "Water.h"
 #include "SunLight.h"
 #include "src/myStage.h"
+#include "src/YfjBuilding.h"
+#include "src/AmenBuilding.h"
+#include "src/Road.h"
 using namespace std;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
@@ -201,16 +204,40 @@ void MyScene::Initialise()
 	cameraRadius();
 	myStage *stage = new myStage();
 	GLuint* skybox = new GLuint[6];
-	skybox[0] = Scene::GetTexture("./skybox_left.bmp");
-	skybox[1] = Scene::GetTexture("./skybox_right.bmp");
-	skybox[2] = Scene::GetTexture("./skybox_front.bmp");
-	skybox[3] = Scene::GetTexture("./skybox_back.bmp");
-	skybox[4] = Scene::GetTexture("./skybox_down.bmp");
-	skybox[5] = Scene::GetTexture("./skybox_up.bmp");
+	skybox[0] = Scene::GetTexture("./Code/src/skybox_left.bmp");
+	skybox[1] = Scene::GetTexture("./Code/src/skybox_right.bmp");
+	skybox[2] = Scene::GetTexture("./Code/src/skybox_front.bmp");
+	skybox[3] = Scene::GetTexture("./Code/src/skybox_back.bmp");
+	skybox[4] = Scene::GetTexture("./Code/src/skybox_down.bmp");
+	skybox[5] = Scene::GetTexture("./Code/src/skybox_up.bmp");
 	stage->setTextures(skybox);
 	stage->size(2*camrad);
 	stage->position(0.f, -100.f, 0.f);
 	AddObjectToScene(stage);
+
+	YfjBuilding *yfjBuilding = new YfjBuilding();
+	GLuint* yfjbd = new GLuint[2];
+	yfjbd[0] = Scene::GetTexture("./Code/src/YFJ0.bmp");
+	yfjbd[1] = Scene::GetTexture("./Code/src/YFJ1.bmp");
+	yfjBuilding->setTextures(yfjbd);
+	yfjBuilding->size(10);
+	yfjBuilding->position(-200.f,-100.f,0.f);
+	AddObjectToScene(yfjBuilding);
+
+	AmenBuilding *amenBuilding = new AmenBuilding();
+	GLuint* amenbd = new GLuint[2];
+	amenbd[0] = Scene::GetTexture("./Code/src/AMEN0.bmp");
+	amenbd[1] = Scene::GetTexture("./Code/src/AMEN1.bmp");
+	amenBuilding->setTextures(amenbd);
+	amenBuilding->size(10);
+	amenBuilding->position(-200.f, -100.f, 170.f);
+	AddObjectToScene(amenBuilding);
+
+	Road *road1 = new Road("./Code/src/Road1.bmp");
+	road1->size(10);
+	road1->setLength(8);
+	road1->position(50.0f, -99.f, -300.0f);
+	AddObjectToScene(road1);
 }
 
 void MyScene::Projection()

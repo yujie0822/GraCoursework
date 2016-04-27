@@ -81,6 +81,15 @@
     <ClCompile Include="Code\src\myStage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Code\src\YfjBuilding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\src\AmenBuilding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\src\Road.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\MyScene.h">
@@ -161,6 +170,15 @@
     <ClInclude Include="Code\src\myStage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Code\src\YfjBuilding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\src\AmenBuilding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\src\Road.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Code\Demos\Texturing\batmanlogo.bmp">
@@ -172,22 +190,28 @@
     <Image Include="Code\Demos\Texturing\water.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="skybox_back.bmp">
+    <Image Include="Code\src\skybox_back.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="skybox_down.bmp">
+    <Image Include="Code\src\skybox_down.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="skybox_front.bmp">
+    <Image Include="Code\src\skybox_front.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="skybox_right.bmp">
+    <Image Include="Code\src\skybox_left.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="skybox_left.bmp">
+    <Image Include="Code\src\skybox_right.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="skybox_up.bmp">
+    <Image Include="Code\src\skybox_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Code\src\YFJ1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Code\src\YFJ0.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

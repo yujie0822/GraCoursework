@@ -1,3 +1,3 @@
 ﻿  MyScene.cpp
-f:\code\gracode\gracoursework\g53gra.framework.msvs\code\myscene.cpp(222): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+f:\code\gracode\gracoursework\g53gra.framework.msvs\code\myscene.cpp(249): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   G53GRA.Framework.MSVS.vcxproj -> F:\code\GRAcode\GraCoursework\G53GRA.Framework.MSVS\Debug\G53GRA.Framework.MSVS.exe
