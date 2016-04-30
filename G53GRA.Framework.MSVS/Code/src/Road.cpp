@@ -22,8 +22,9 @@ void Road::Display() {
 	glRotatef(rotation[2], 0.f, 0.f, 1.f);
 	for (int i = 0; i < roadLength; i++)
 	{
-		glTranslatef(0.f, 0.f, 6.9f);
 		DrawRoad();
+		glTranslatef(0.f, 0.f, 6.9f);
+
 	}
 
 

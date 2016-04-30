@@ -19,6 +19,8 @@
 #include "src/YfjBuilding.h"
 #include "src/AmenBuilding.h"
 #include "src/Road.h"
+#include "src/Tree.h"
+#include "src/Bird.h"
 using namespace std;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
@@ -215,13 +217,15 @@ void MyScene::Initialise()
 	stage->position(0.f, -100.f, 0.f);
 	AddObjectToScene(stage);
 
+
+//buildings
 	YfjBuilding *yfjBuilding = new YfjBuilding();
 	GLuint* yfjbd = new GLuint[2];
 	yfjbd[0] = Scene::GetTexture("./Code/src/YFJ0.bmp");
 	yfjbd[1] = Scene::GetTexture("./Code/src/YFJ1.bmp");
 	yfjBuilding->setTextures(yfjbd);
 	yfjBuilding->size(10);
-	yfjBuilding->position(-200.f,-100.f,0.f);
+	yfjBuilding->position(-200.f,-100.f,-200.f);
 	AddObjectToScene(yfjBuilding);
 
 	AmenBuilding *amenBuilding = new AmenBuilding();
@@ -230,19 +234,87 @@ void MyScene::Initialise()
 	amenbd[1] = Scene::GetTexture("./Code/src/AMEN1.bmp");
 	amenBuilding->setTextures(amenbd);
 	amenBuilding->size(10);
-	amenBuilding->position(-200.f, -100.f, 170.f);
+	amenBuilding->position(-200.f, -100.f, 0.0f);
 	AddObjectToScene(amenBuilding);
 
+
+//road
 	Road *road1 = new Road("./Code/src/Road1.bmp");
 	road1->size(10);
-	road1->setLength(8);
-	road1->position(50.0f, -99.f, -300.0f);
+	road1->setLength(9);
+	road1->position(50.0f, -99.f, -480.0f);
 	AddObjectToScene(road1);
+
+	Road *road2	= new Road("./Code/src/Road1.bmp");
+	road2->size(10);
+	road2->setLength(8);
+	road2->position(-300.0f, -99.f, -480.0f);
+	AddObjectToScene(road2);
+
+	Road *road3 = new Road("./Code/src/Road2.bmp");
+	road3->size(10);
+	road3->setLength(5);
+	road3->position(-280.0f, -99.f, 120.0f);
+	road3->orientation(0.f, 77.f, 0.f);
+	AddObjectToScene(road3);
+
+//water
+	Water *water = new Water(20, 20, "./Code/Demos/Texturing/water.bmp");
+	water->size(400);
+	water->position(-600.f, -98.f, -150.0f);
+	AddObjectToScene(water);
+
+
+//tree
+	Tree *tree1 = new Tree("./Code/src/bark.bmp");
+	Tree *tree2 = new Tree("./Code/src/bark.bmp");
+	Tree *tree3 = new Tree("./Code/src/bark.bmp");
+	Tree *tree4 = new Tree("./Code/src/bark.bmp");
+	Tree *tree5 = new Tree("./Code/src/bark.bmp");
+	Tree *tree6 = new Tree("./Code/src/bark.bmp");
+
+	tree1->setReplaceString('f', "ff-[-& f + ff + < + f] + [+>f--f&-f]");
+	tree2->setReplaceString('f', "ff-[-& f + ff + < + f] + [+>f--f&-f]");
+	tree3->setReplaceString('f', "ff-[-& f + ff + < + f] + [+>f--f&-f]");
+	tree4->setReplaceString('f', "ff-[-& f + ff + < + f] + [+>f--f&-f]");
+	tree5->setReplaceString('f', "ff-[-& f + ff + < + f] + [+>f--f&-f]");
+	tree6->setReplaceString('f', "ff-[-& f + ff + < + f] + [+>f--f&-f]");
+
+	tree1->size(5);
+	tree2->size(5);
+	tree3->size(5);
+	tree4->size(5);
+	tree5->size(5);
+	tree6->size(5);
+
+	tree1->position(-200.f, -98.f, 80.0f);
+	tree2->position(-160.f, -98.f, 88.0f);
+	tree3->position(-120.f, -98.f, 97.0f);
+	tree4->position(-80.f, -98.f, 105.0f);
+	tree5->position(-40.f, -98.f, 114.0f);
+	tree6->position(0.f, -98.f, 123.0f);
+
+	AddObjectToScene(tree1);
+	AddObjectToScene(tree2);
+	AddObjectToScene(tree3);
+	AddObjectToScene(tree4);
+	AddObjectToScene(tree5);
+	AddObjectToScene(tree6);
+	
+	Bird *bird = new Bird(24.f, 31.4f, "./Code/src/bird333.bmp");
+	bird->position(0.f, -0.f, -300.f);
+	bird->size(5.f);
+	AddObjectToScene(bird);
+
+	//Link *link = new Link(10.f, 25.f, "./Code/Demos/Texturing/linkSpriteSheet.bmp");
+	//link->position(0.f, -99.9f, 220.f);
+	//link->size(10.f);
+	//AddObjectToScene(link);
 }
 
 void MyScene::Projection()
 {
-	gluPerspective(60.0, (GLdouble)windowWidth / (GLdouble)windowHeight, 1.0, 30000.0);
+	gluPerspective(60.0, (GLdouble)windowWidth / (GLdouble)windowHeight, 1.0, 20000.0);
 }
 
 void MyScene::cameraRadius() {

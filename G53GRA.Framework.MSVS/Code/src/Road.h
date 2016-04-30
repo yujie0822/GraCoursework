@@ -9,7 +9,7 @@ public:
 	~Road();
 	void Display();
 	void setLength(int l);
-private:
+protected:
 	void DrawRoad();
 	int roadLength=1;
 	GLint texID;

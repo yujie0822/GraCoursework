@@ -66,6 +66,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Code\src\Bird.cpp" />
     <ClCompile Include="Code\src\AmenBuilding.cpp" />
     <ClCompile Include="Code\Demos\Lighting\Light.cpp" />
     <ClCompile Include="Code\Demos\Lighting\MultiLight.cpp" />
@@ -91,8 +92,10 @@
     <ClCompile Include="Code\src\myStage.cpp" />
     <ClCompile Include="Code\src\YfjBuilding.cpp" />
     <ClCompile Include="Code\src\Road.cpp" />
+    <ClCompile Include="Code\src\Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\src\Bird.h" />
     <ClInclude Include="Code\src\AmenBuilding.h" />
     <ClInclude Include="Code\Demos\Animated Lamp\LampMesh.h" />
     <ClInclude Include="Code\Demos\Lighting\Light.h" />
@@ -122,11 +125,17 @@
     <ClInclude Include="Code\src\myStage.h" />
     <ClInclude Include="Code\src\YfjBuilding.h" />
     <ClInclude Include="Code\src\Road.h" />
+    <ClInclude Include="Code\src\Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Code\Demos\Texturing\batmanlogo.bmp" />
     <Image Include="Code\Demos\Texturing\linkSpriteSheet.bmp" />
     <Image Include="Code\Demos\Texturing\water.bmp" />
+    <Image Include="Code\src\AMEN0.bmp" />
+    <Image Include="Code\src\AMEN1.bmp" />
+    <Image Include="Code\src\bark.bmp" />
+    <Image Include="Code\src\Road1.bmp" />
+    <Image Include="Code\src\Road2.bmp" />
     <Image Include="Code\src\skybox_back.bmp" />
     <Image Include="Code\src\skybox_down.bmp" />
     <Image Include="Code\src\skybox_front.bmp" />

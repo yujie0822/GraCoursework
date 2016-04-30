@@ -1,5 +1,5 @@
 #pragma once
-#include "F:\code\GRAcode\GraCoursework\G53GRA.Framework.MSVS\Framework\Interface\DisplayableObject.h"
+#include "DisplayableObject.h"
 class AmenBuilding :
 	public DisplayableObject
 {
