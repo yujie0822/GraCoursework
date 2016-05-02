@@ -59,30 +59,44 @@ void AmenBuilding::DrawBuilding() {
 	glVertex3f(24.0f, 7.0f, 0.0f);
 	glEnd();
 
+	glBindTexture(GL_TEXTURE_2D, texids[2]);
 	glBegin(GL_QUADS);
 	//draw the left face
-	glColor3f(0.5f, 0.5f, 0.5f);
+	glNormal3f(-3.0f, -1.0f, 0.0f);
+	glTexCoord2f(0.0f, 0.0f);
 	glVertex3f(1.0f, 0.0f, 0.0f);
+	glTexCoord2f(1.0f, 0.0f);
 	glVertex3f(1.0f, 0.0f, 4.0f);
+	glTexCoord2f(1.0f, 1.0f);
 	glVertex3f(0.0f, 3.0f, 4.0f);
+	glTexCoord2f(0.0f, 1.0f);
 	glVertex3f(0.0f, 3.0f, 0.0f);
 	glEnd();
 
+	glBindTexture(GL_TEXTURE_2D, texids[3]);
 	glBegin(GL_QUADS);
 	//draw the top face
-	glColor3f(0.5f, 0.5f, 0.5f);
+	glTexCoord2f(0.0f, 0.0f);
 	glVertex3f(0.0f, 3.0f, 0.0f);
+	glTexCoord2f(1.0f, 0.0f);
 	glVertex3f(0.0f, 3.0f, 4.0f);
+	glTexCoord2f(1.0f, 1.0f);
 	glVertex3f(24.0f, 7.0f, 4.0f);
+	glTexCoord2f(0.0f, 1.0f);
 	glVertex3f(24.0f, 7.0f, 0.0f);
 	glEnd();
 
+	glBindTexture(GL_TEXTURE_2D, texids[4]);
 	glBegin(GL_QUADS);
 	//draw the right face
-	glColor3f(0.5f, 0.5f, 0.5f);
+	glNormal3f(-7.0f, -2.0f, 0.0f);
+	glTexCoord2f(1.0f, 1.0f);
 	glVertex3f(24.0f, 7.0f, 0.0f);
+	glTexCoord2f(0.0f, 1.0f);
 	glVertex3f(24.0f, 7.0f, 4.0f);
+	glTexCoord2f(0.0f, 0.0f);
 	glVertex3f(22.0f, 0.0f, 4.0f);
+	glTexCoord2f(1.0f, 0.0f);
 	glVertex3f(22.0f, 0.0f, 0.0f);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);

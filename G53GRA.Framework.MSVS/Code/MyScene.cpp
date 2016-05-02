@@ -21,6 +21,9 @@
 #include "src/Road.h"
 #include "src/Tree.h"
 #include "src/Bird.h"
+#include "src/mySunlight.h"
+#include "src/StreetLight.h"
+
 using namespace std;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
@@ -220,18 +223,25 @@ void MyScene::Initialise()
 
 //buildings
 	YfjBuilding *yfjBuilding = new YfjBuilding();
-	GLuint* yfjbd = new GLuint[2];
+	GLuint* yfjbd = new GLuint[6];
 	yfjbd[0] = Scene::GetTexture("./Code/src/YFJ0.bmp");
 	yfjbd[1] = Scene::GetTexture("./Code/src/YFJ1.bmp");
+	yfjbd[2] = Scene::GetTexture("./Code/src/YFJ2.bmp");
+	yfjbd[3] = Scene::GetTexture("./Code/src/AMEN3.bmp");
+	yfjbd[4] = Scene::GetTexture("./Code/src/YFJ4.bmp");
+	yfjbd[5] = Scene::GetTexture("./Code/src/YFJ5.bmp");
 	yfjBuilding->setTextures(yfjbd);
 	yfjBuilding->size(10);
 	yfjBuilding->position(-200.f,-100.f,-200.f);
 	AddObjectToScene(yfjBuilding);
 
 	AmenBuilding *amenBuilding = new AmenBuilding();
-	GLuint* amenbd = new GLuint[2];
+	GLuint* amenbd = new GLuint[5];
 	amenbd[0] = Scene::GetTexture("./Code/src/AMEN0.bmp");
-	amenbd[1] = Scene::GetTexture("./Code/src/AMEN1.bmp");
+	amenbd[1] = Scene::GetTexture("./Code/src/AMEN1.bmp");	
+	amenbd[2] = Scene::GetTexture("./Code/src/AMEN2.bmp");
+	amenbd[3] = Scene::GetTexture("./Code/Src/AMEN3.bmp");
+	amenbd[4] = Scene::GetTexture("./Code/Src/AMEN4.bmp");
 	amenBuilding->setTextures(amenbd);
 	amenBuilding->size(10);
 	amenBuilding->position(-200.f, -100.f, 0.0f);
@@ -300,16 +310,70 @@ void MyScene::Initialise()
 	AddObjectToScene(tree4);
 	AddObjectToScene(tree5);
 	AddObjectToScene(tree6);
-	
-	Bird *bird = new Bird(24.f, 31.4f, "./Code/src/bird333.bmp");
+//bird
+	Bird *bird = new Bird(24.f, 31.4f, "./Code/src/bird.bmp");
 	bird->position(0.f, -0.f, -300.f);
 	bird->size(5.f);
 	AddObjectToScene(bird);
 
-	//Link *link = new Link(10.f, 25.f, "./Code/Demos/Texturing/linkSpriteSheet.bmp");
-	//link->position(0.f, -99.9f, 220.f);
-	//link->size(10.f);
-	//AddObjectToScene(link);
+//light
+
+	mySunlight *sl = new mySunlight();
+	sl->direction(-1.f, 1, 1.f);
+	AddObjectToScene(sl);
+
+	SpotLight *s0 = new SpotLight(GL_LIGHT1, 0);
+	s0->size(0.1);
+	s0->position(-198.f, -74.f, 132.f);
+	s0->SetAmbient(0.8f, 0.8f, 0.8f, 1.0f);
+	s0->SetDiffuse(0.9f, 0.9f, 0.9f, 1.0f);
+	s0->SetSpecular(1.0f, 0.5f, 0.5f, 1.0f);
+	s0->SetAttenuation(1.0f, 0.0f, 0.0f);
+	s0->SetSpotDirection(0.0f, -1.0f, 0.0f);
+	s0->SetSpotExponent(6.0f);
+	s0->SetSpotCutOff(80.0f);
+	AddObjectToScene(s0);
+
+	StreetLight *stl = new StreetLight();
+	stl->orientation(0.f, -13.f, 0.f);
+	stl->position(-200.f, -98.f, 140.f);
+	stl->size(5);
+	AddObjectToScene(stl);
+
+	SpotLight *s1 = new SpotLight(GL_LIGHT2, 0);
+	s1->size(0.1);
+	s1->position(-98.f, -74.f, 155.f);
+	s1->SetAmbient(0.9f, 0.9f, 0.9f, 1.0f);
+	s1->SetDiffuse(0.9f, 0.9f, 0.9f, 1.0f);
+	s1->SetSpecular(1.0f, 0.5f, 0.5f, 1.0f);
+	s1->SetAttenuation(1.0f, 0.0f, 0.0f);
+	s1->SetSpotDirection(0.0f, -1.0f, 0.0f);
+	s1->SetSpotExponent(6.0f);
+	s1->SetSpotCutOff(80.0f);
+	AddObjectToScene(s1);
+
+	StreetLight *stl2 = new StreetLight();
+	stl2->orientation(0.f, -13.f, 0.f);
+	stl2->position(-100.f, -98.f, 163.f);
+	stl2->size(5);
+	AddObjectToScene(stl2);
+
+	SpotLight *s2 = new SpotLight(GL_LIGHT3, 0);
+	s2->size(0.1);
+	s2->position(-8.f, -74.f, 175.f);
+	s2->SetAmbient(0.8f, 0.8f, 0.8f, 1.0f);
+	s2->SetDiffuse(0.9f, 0.9f, 0.9f, 1.0f);
+	s2->SetSpecular(1.0f, 0.5f, 0.5f, 1.0f);
+	s2->SetAttenuation(1.0f, 0.0f, 0.0f);
+	s2->SetSpotDirection(0.0f, -1.0f, 0.0f);
+	s2->SetSpotExponent(6.0f);
+	s2->SetSpotCutOff(80.0f);
+	AddObjectToScene(s2);
+	StreetLight *stl3 = new StreetLight();
+	stl3->orientation(0.f, -13.f, 0.f);
+	stl3->position(-10.f, -98.f, 184.f);
+	stl3->size(5);
+	AddObjectToScene(stl3);
 }
 
 void MyScene::Projection()

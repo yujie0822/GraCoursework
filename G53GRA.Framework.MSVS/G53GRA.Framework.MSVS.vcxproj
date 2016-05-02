@@ -93,6 +93,8 @@
     <ClCompile Include="Code\src\YfjBuilding.cpp" />
     <ClCompile Include="Code\src\Road.cpp" />
     <ClCompile Include="Code\src\Tree.cpp" />
+    <ClCompile Include="Code\src\mySunlight.cpp" />
+    <ClCompile Include="Code\src\StreetLight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\src\Bird.h" />
@@ -126,6 +128,8 @@
     <ClInclude Include="Code\src\YfjBuilding.h" />
     <ClInclude Include="Code\src\Road.h" />
     <ClInclude Include="Code\src\Tree.h" />
+    <ClInclude Include="Code\src\mySunlight.h" />
+    <ClInclude Include="Code\src\StreetLight.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Code\Demos\Texturing\batmanlogo.bmp" />
@@ -134,6 +138,8 @@
     <Image Include="Code\src\AMEN0.bmp" />
     <Image Include="Code\src\AMEN1.bmp" />
     <Image Include="Code\src\bark.bmp" />
+    <Image Include="Code\src\bird.bmp" />
+    <Image Include="Code\src\bird333.bmp" />
     <Image Include="Code\src\Road1.bmp" />
     <Image Include="Code\src\Road2.bmp" />
     <Image Include="Code\src\skybox_back.bmp" />

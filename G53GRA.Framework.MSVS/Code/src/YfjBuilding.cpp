@@ -65,35 +65,55 @@ void YfjBuilding::DrawBuilding() {
 
 	glEnd();
 
+
+	glBindTexture(GL_TEXTURE_2D, texids[2]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f, 0.5f, 0.5f);
+
+	glTexCoord2f(0.f,0.f);
 	glVertex3f(1.0f, 0.0f, 0.0f);
+	glTexCoord2f(1.f, 0.f);
 	glVertex3f(1.0f, 0.0f, 4.0f);
+	glTexCoord2f(1.f, 1.f);
 	glVertex3f(0.0f, 1.0f, 4.0f);
+	glTexCoord2f(0.f, 1.f);
 	glVertex3f(0.0f, 1.0f, 0.0f);
 	glEnd();
 
+	glBindTexture(GL_TEXTURE_2D, texids[3]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f, 0.5f, 0.5f);
+
+	glTexCoord2f(0.f, 0.f);
 	glVertex3f(0.0f, 1.0f, 0.0f);
+	glTexCoord2f(1.f, 0.f);
 	glVertex3f(0.0f, 1.0f, 4.0f);
+	glTexCoord2f(1.f, 1.f);
 	glVertex3f(20.0f, 10.0f, 4.0f);
+	glTexCoord2f(0.f, 1.f);
 	glVertex3f(20.0f, 10.0f, 0.0f);
 	glEnd();
 
+	glBindTexture(GL_TEXTURE_2D, texids[4]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f, 0.5f, 0.5f);
+
+	glTexCoord2f(1.f, 1.f);
 	glVertex3f(20.0f, 10.0f, 0.0f);
+	glTexCoord2f(0.f, 1.f);
 	glVertex3f(20.0f, 10.0f, 4.0f);
+	glTexCoord2f(0.f, 0.f);
 	glVertex3f(24.0f, 2.0f, 4.0f);
+	glTexCoord2f(1.f, 0.f);
 	glVertex3f(24.0f, 2.0f, 0.0f);
 	glEnd();
 
+	glBindTexture(GL_TEXTURE_2D, texids[5]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f, 0.5f, 0.5f);
+	glTexCoord2f(1.f, 1.f);
 	glVertex3f(24.0f, 2.0f, 0.0f);
+	glTexCoord2f(0.f, 1.f);
 	glVertex3f(24.0f, 2.0f, 4.0f);
+	glTexCoord2f(0.f, 0.f);
 	glVertex3f(21.0f, 0.0f, 4.0f);
+	glTexCoord2f(1.f, 0.f);
 	glVertex3f(21.0f, 0.0f, 0.0f);
 	glEnd();
 

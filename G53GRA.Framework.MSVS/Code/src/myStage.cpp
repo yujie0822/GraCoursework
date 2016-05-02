@@ -29,7 +29,7 @@ void myStage::Display() {
 
 
 void myStage::drawStage() {
-	glDisable(GL_LIGHTING);                 // Disable lighting just for skybox
+	//glDisable(GL_LIGHTING);                 // Disable lighting just for skybox
 
 	if (toTexture) glEnable(GL_TEXTURE_2D); // Enable 2D texturing
 
@@ -112,7 +112,7 @@ void myStage::drawStage() {
 	glEnd();
 
 	if (toTexture) glDisable(GL_TEXTURE_2D);    // Disable texturing until reenabled
-	glEnable(GL_LIGHTING);                      // Reenable lighting after drawing skybox
+	//glEnable(GL_LIGHTING);                      // Reenable lighting after drawing skybox
 }
 
 void myStage::setTextures(GLuint* _texids) {

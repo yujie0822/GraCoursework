@@ -96,6 +96,12 @@
     <ClCompile Include="Code\src\Bird.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Code\src\mySunlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\src\StreetLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\MyScene.h">
@@ -191,6 +197,12 @@
     <ClInclude Include="Code\src\Bird.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Code\src\mySunlight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\src\StreetLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Code\Demos\Texturing\batmanlogo.bmp">
@@ -239,6 +251,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Code\src\Road2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Code\src\bird333.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Code\src\bird.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
