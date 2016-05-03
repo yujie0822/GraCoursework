@@ -85,3 +85,12 @@ void Bird::Update(const double& deltaTime) {
 	texCoords[6] = sCoord; // (s,t) texture coord at [1, 1]
 	texCoords[7] = 1.f;
 }
+
+void Bird::HandleKey(unsigned char key, int state, int x, int y)
+{
+	if (key == 'p' && state) // 'r' key pressed: pause/unpause animation
+	{
+		runAnimate = !runAnimate;
+		if (runAnimate) spriteFrame = 0;
+	}
+}

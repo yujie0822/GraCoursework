@@ -1,6 +1,1 @@
-﻿  MyScene.cpp
-f:\code\gracode\gracoursework\g53gra.framework.msvs\code\myscene.cpp(326): warning C4305: 'argument': truncation from 'double' to 'float'
-f:\code\gracode\gracoursework\g53gra.framework.msvs\code\myscene.cpp(344): warning C4305: 'argument': truncation from 'double' to 'float'
-f:\code\gracode\gracoursework\g53gra.framework.msvs\code\myscene.cpp(362): warning C4305: 'argument': truncation from 'double' to 'float'
-f:\code\gracode\gracoursework\g53gra.framework.msvs\code\myscene.cpp(385): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  G53GRA.Framework.MSVS.vcxproj -> F:\code\GRAcode\GraCoursework\G53GRA.Framework.MSVS\Debug\G53GRA.Framework.MSVS.exe
+﻿  G53GRA.Framework.MSVS.vcxproj -> F:\code\GRAcode\GraCoursework\G53GRA.Framework.MSVS\Debug\G53GRA.Framework.MSVS.exe

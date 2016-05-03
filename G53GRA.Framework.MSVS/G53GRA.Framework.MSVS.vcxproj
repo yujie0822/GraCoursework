@@ -137,6 +137,9 @@
     <Image Include="Code\Demos\Texturing\water.bmp" />
     <Image Include="Code\src\AMEN0.bmp" />
     <Image Include="Code\src\AMEN1.bmp" />
+    <Image Include="Code\src\AMEN2.bmp" />
+    <Image Include="Code\src\AMEN3.bmp" />
+    <Image Include="Code\src\AMEN4.bmp" />
     <Image Include="Code\src\bark.bmp" />
     <Image Include="Code\src\bird.bmp" />
     <Image Include="Code\src\bird333.bmp" />
@@ -150,6 +153,9 @@
     <Image Include="Code\src\skybox_up.bmp" />
     <Image Include="Code\src\YFJ0.bmp" />
     <Image Include="Code\src\YFJ1.bmp" />
+    <Image Include="Code\src\YFJ2.bmp" />
+    <Image Include="Code\src\YFJ4.bmp" />
+    <Image Include="Code\src\YFJ5.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

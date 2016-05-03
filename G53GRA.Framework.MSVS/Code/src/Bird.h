@@ -15,6 +15,7 @@ public:
 	~Bird();
 	void Display();
 	void Update(const double& deltaTime);
+	void HandleKey(unsigned char key, int state, int x, int y);
 private:
 
 	int texID;
